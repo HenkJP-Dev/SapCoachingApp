@@ -4,6 +4,7 @@
     --secondarytext: #B0B0B0;
     --border: #444444;
     --accent: #888888;
+    --buttons: #a77d00;
 }
 
 * {
@@ -12,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     scroll-behavior: smooth;
 }
 
@@ -48,7 +49,7 @@ header {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 2rem;
 }
 
 .header {
@@ -84,7 +85,7 @@ h1 {
 }
 
 .simplenav {
-    font-size: 18px;
+    font-size: 1rem;
     transition: all 0.1s ease-in-out;
     padding: 8px;
 }
@@ -140,13 +141,14 @@ main {
 }
 
 .section_info a {
-    font-size: 24px;
+    font-size: 1.2rem;
     margin-top: 3vh;
     align-self: center;
-    text-align: center;
     background-color: #000000;
     border: #ffffff 1px solid;
-    padding: 20px 250px;
+    width: 70%;
+    padding: 20px;
+    margin: auto;
     border-radius: 10px;
     text-decoration: none;
     transition: all ease-in-out;
@@ -158,7 +160,8 @@ main {
     gap: 10px;
     background: rgb(167, 125, 0, 0.7);
     font-weight: bold;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .section_info a:hover {
@@ -166,7 +169,11 @@ main {
 }
 
 .section_info h2 {
-    font-size: 52px;
+    font-size: 3rem;
+}
+
+.section_info p {
+    font-size: 1.2rem;
 }
 
 .section_img {
@@ -192,10 +199,23 @@ main {
 }
 
 .offers h2 {
-    font-size: 40px;
+    font-size: 2.2rem;
     text-align: center;
 }
 
 footer {
     padding-top: 100vh;
+}
+
+
+
+@media (width <=1920px) {
+    .section_info h2 {
+        font-size: 2.2rem;
+    }
+
+    .section_info p {
+        font-size: 1rem;
+    }
+
 }
