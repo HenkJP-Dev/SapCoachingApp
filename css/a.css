@@ -1,0 +1,149 @@
+body {
+    background-color: var(--background);
+    font-size: 1vw;
+}
+
+.bg-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #161616, transparent 20%);
+}
+
+header {
+    background-color: black;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+    width: 100vw;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 55em;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-container .logo {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nav-container .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-container .logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 5%;
+    width: 100%;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.simplenav:hover {
+    scale: 1.1;
+    background: rgb(107, 106, 106, 0.5);
+    border-radius: 5px;
+}
+
+.simplenav {
+    font-size: 1rem;
+    transition: all 0.1s ease-in-out;
+    padding: 8px;
+}
+
+.login {
+    width: 100%;
+}
+
+.login-button {
+    transition-duration: 0.25s;
+    padding: 10px 20px;
+    border: white 1px solid;
+    border-radius: 10px;
+    background: linear-gradient(to left, transparent 50%, #a77d00 50%) right;
+    background-size: 200%;
+    display: inline-flex;
+    gap: 5px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-position: left;
+    border-color: #a77d00;
+    color: white
+}
+
+.login-button svg {
+    position: relative;
+    top: 12.5%;
+}
+
+section img {
+    max-width: 100%;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    max-width: 55em;
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    min-height: 70vh;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 2rem;
+}
+
+.introImage {
+    width: 45%;
+    padding: 2rem;
+}
+
+.introImage img {
+    width: 100%;
+    object-fit: cover;
+}
