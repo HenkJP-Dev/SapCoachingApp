@@ -15,12 +15,14 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    scrollbar-color: var(--border) transparent;
 }
 
 body {
     background-color: var(--background);
     overflow-x: hidden;
     box-sizing: border-box;
+    width: 100%;
 }
 
 h1,
@@ -70,6 +72,7 @@ main {
     width: 100%;
     background: linear-gradient(to bottom, #1a1a1a, transparent 5em);
     min-height: 100%;
+
 }
 
 .checked {
@@ -192,40 +195,54 @@ nav img {
 
 .offerItems {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 2em;
-    overflow: scroll;
     max-height: 42em;
-    max-width: fit-content;
-    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
-    align-self: center;
+    width: 100%;
     padding: 1em;
+    overflow-x: scroll;
+    scrollbar-color: var(--border) transparent;
 }
 
-.offerItems div {
-    max-width: 20em;
+.offerItems .offer {
+    /* max-width: 20em;
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     padding: 2em;
     display: flex;
     flex-direction: column;
     gap: 1em;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 15px; */
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+    padding: 2em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 17em;
+    min-height: 20em;
 }
 
-.offers div svg {
+.offer div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.offers .offer svg {
     width: auto;
     height: 2em;
     fill: var(--buttons);
 }
 
-.offers div a {
+.offers .offer a {
     border: var(--buttons) 1px solid;
     border-radius: 15px;
     padding: 0.5em 1.5em;
     margin-top: 1em;
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+    text-align: center;
 }
 
 .offers h1 {
@@ -250,17 +267,18 @@ nav img {
 }
 
 .reviewsContainer {
-    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     margin: 2em 0;
     padding: 2em 2em;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
     gap: 2em;
+    width: 100%;
+    scrollbar-color: var(--border) transparent;
 }
 
 .reviewsContainer div {
-    border: var(--accent) 2px solid;
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     padding: 2em;
     border-radius: 20px;
     display: flex;
