@@ -67,9 +67,13 @@ main {
 }
 
 .bg-wrapper {
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(to bottom, #1a1a1a, transparent 5em);
     min-height: 100%;
+}
+
+.checked {
+    color: var(--buttons);
 }
 
 .logo-container {
@@ -191,6 +195,12 @@ nav img {
     flex-direction: column;
     align-items: center;
     gap: 2em;
+    overflow: scroll;
+    max-height: 42em;
+    max-width: fit-content;
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+    align-self: center;
+    padding: 1em;
 }
 
 .offerItems div {
@@ -201,6 +211,7 @@ nav img {
     flex-direction: column;
     gap: 1em;
     align-items: center;
+    border-radius: 15px;
 }
 
 .offers div svg {
@@ -210,14 +221,69 @@ nav img {
 }
 
 .offers div a {
-    border: white 1px solid;
+    border: var(--buttons) 1px solid;
     border-radius: 15px;
     padding: 0.5em 1.5em;
     margin-top: 1em;
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
 }
 
 .offers h1 {
     font-size: 1.5em;
+}
+
+.aboutMe {
+    padding-top: 4em;
+}
+
+.reviews {
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.reviews h1 {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.reviewsContainer {
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+    margin: 2em 0;
+    padding: 2em 2em;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 2em;
+}
+
+.reviewsContainer div {
+    border: var(--accent) 2px solid;
+    padding: 2em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 90%;
+}
+
+.reviewsContainer h3 {
+    font-size: 1.2em;
+}
+
+.reviewsContainer .date {
+    font-size: 0.8em;
+}
+
+.reviewsContainer a {
+    border: var(--buttons) 1px solid;
+    border-radius: 15px;
+    padding: 0.5em 1.5em;
+    margin-top: 1em;
+    box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+    text-align: center;
 }
 
 /* } */
