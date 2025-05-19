@@ -15,7 +15,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    scrollbar-color: var(--border) transparent;
+    /* scrollbar-color: var(--border) transparent; */
 }
 
 body {
@@ -179,6 +179,7 @@ nav img {
 .intro p {
     text-align: center;
     padding-bottom: 2em;
+    line-height: 1.2em;
 }
 
 .intro img {
@@ -189,8 +190,7 @@ nav img {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding-top: 6em;
-    padding-bottom: 6em;
+    padding: 6em 1.5em;
 }
 
 .offerItems {
@@ -201,11 +201,40 @@ nav img {
     max-height: 42em;
     width: 100%;
     padding: 1em;
-    overflow-x: scroll;
-    scrollbar-color: var(--border) transparent;
+
+    /* scrollbar-color: var(--border) transparent; */
+    /* scrollbar-arrow-color: white; */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    >li {
+        scroll-snap-align: center;
+    }
+
 }
 
-.offerItems .offer {
+.offerItems::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border: 1px solid var(--background);
+    border-radius: 10px;
+
+}
+
+.offerItems::-webkit-scrollbar {
+    color: transparent;
+    height: 0.7em;
+}
+
+
+.offerItems::-webkit-scrollbar-track {
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: transparent;
+    border: var(--border) 2px solid;
+    border-radius: 10px;
+}
+
+.offerItems li {
     /* max-width: 20em;
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     padding: 2em;
@@ -220,23 +249,28 @@ nav img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 17em;
+    /* min-width: 17em; */
+    min-width: 100%;
+    max-width: 25em;
     min-height: 20em;
+    flex: 1;
+
+    /* width: clamp(17em 20em 25em); */
 }
 
-.offer div {
+li div {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
 }
 
-.offers .offer svg {
+.offers li svg {
     width: auto;
     height: 2em;
     fill: var(--buttons);
 }
 
-.offers .offer a {
+.offers li a {
     border: var(--buttons) 1px solid;
     border-radius: 15px;
     padding: 0.5em 1.5em;
@@ -254,37 +288,77 @@ nav img {
 }
 
 .reviews {
-    padding-top: 6em;
-    padding-bottom: 6em;
+    padding: 6em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .reviews h1 {
     font-size: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
 .reviewsContainer {
-    margin: 2em 0;
+    /* margin: 2em 0;
     padding: 2em 2em;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
     gap: 2em;
+    width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    max-height: 42em;
     width: 100%;
-    scrollbar-color: var(--border) transparent;
+    padding: 1em;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    >li {
+        scroll-snap-align: center;
+    }
+
 }
 
-.reviewsContainer div {
+.reviewsContainer::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border: 1px solid var(--background);
+    border-radius: 10px;
+
+}
+
+.reviewsContainer::-webkit-scrollbar {
+    color: transparent;
+    height: 0.7em;
+}
+
+
+.reviewsContainer::-webkit-scrollbar-track {
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: transparent;
+    border: var(--border) 2px solid;
+    border-radius: 10px;
+}
+
+.reviewsContainer li {
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     padding: 2em;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
+    max-width: 25em;
+    min-height: 20em;
+    flex: 1;
     gap: 1em;
-    min-width: 18em;
 }
 
 .reviewsContainer h3 {
