@@ -189,9 +189,26 @@ nav img {
 .offers {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2em;
     padding: 6em 1.5em;
 }
+
+.scroll {
+    font-size: 0.8em;
+    color: var(--secondarytext);
+    display: inline-flex;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.scroll svg {
+    height: 14px;
+}
+
 
 .offerItems {
     display: flex;
