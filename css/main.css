@@ -75,6 +75,10 @@ main {
 
 }
 
+.navCorrection {
+    padding-top: 3em;
+}
+
 .checked {
     color: var(--buttons);
 }
