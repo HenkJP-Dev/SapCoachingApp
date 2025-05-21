@@ -139,6 +139,10 @@ main {
     text-align: center;
 }
 
+footer {
+    background-color: var(--nav);
+}
+
 /* Mobile style
 @media screen and (min-width: 480px) { */
 .padding {
@@ -153,6 +157,7 @@ nav ul {
 nav {
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 nav img {
@@ -161,6 +166,110 @@ nav img {
     padding: 5px 0;
 
 }
+
+#intro,
+#offers,
+#aboutMe,
+#reviews {
+    scroll-margin-top: 3em;
+}
+
+.login-button {
+    display: none;
+}
+
+.login-button-mobile {
+    color: var(--secondarytext);
+    transition-duration: 0.25s;
+    padding: 0.5em 1em;
+    border: var(--secondarytext) 1px solid;
+    border-radius: 10px;
+    background: linear-gradient(to left, transparent 50%, #a77d00 50%) right;
+    background-size: 200%;
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--primarytext);
+    margin: 1em 0;
+}
+
+.login-button-mobile svg {
+    position: relative;
+    top: 12.5%;
+}
+
+.hamburger-menu {
+    height: 80%;
+    width: 40px;
+    position: absolute;
+    right: 1em;
+}
+
+.hamburger-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--secondarytext);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in-out;
+    z-index: 9;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 25%
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 75%
+}
+
+.sideNav {
+    background-color: var(--nav);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: top 0.2s ease-in-out;
+    padding-bottom: 1.5em;
+}
+
+.sideNav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.sideNav.active {
+    top: 4em;
+    opacity: 0.9;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 
 .intro {
     padding-top: 2em;
@@ -394,6 +503,46 @@ li div {
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     text-align: center;
 }
+
+footer {
+    height: fit-content;
+    font-size: 0.85rem;
+    padding: 3em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+footer a {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: fit-content;
+    align-self: center;
+    font-weight: bold;
+    text-align: left;
+}
+
+footer .contact svg {
+    fill: var(--buttons);
+}
+
+footer .CopyCred {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
+footer .CopyCred svg {}
 
 /* } */
 
