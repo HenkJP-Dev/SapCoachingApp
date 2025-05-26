@@ -274,6 +274,10 @@ nav img {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.offerPopup.active {
+    z-index: 999;
+    background-color: var(--background);
+}
 
 .intro {
     padding-top: 2em;
@@ -400,18 +404,62 @@ li div {
     fill: var(--buttons);
 }
 
-.offers li a {
+.offers li button {
     border: var(--buttons) 1px solid;
     border-radius: 15px;
     padding: 0.5em 1.5em;
     margin-top: 1em;
     box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
     text-align: center;
+    background-color: transparent;
+    color: var(--primarytext);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .offers h1 {
     font-size: 1.5em;
 }
+
+.offerPopup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.offerPopup.open {
+    opacity: 1;
+    z-index: 9999;
+
+}
+
+.popupContent {
+    position: relative;
+    padding: 1.5em;
+    padding-top: 5em;
+    background-color: var(--background);
+    border-radius: 15px;
+    margin: 2em;
+    box-shadow: 2px 3px 5px #000000, 0px 1px 1px #333;
+    height: 50em
+}
+
+.popupContent button {
+    position: absolute;
+    top: 0.1em;
+    right: 1em;
+}
+
 
 .aboutMe {
     padding-top: 4em;
